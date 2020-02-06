@@ -1,0 +1,15 @@
+{
+  "name": "integrationtest",
+  "version": "1.0.0",
+  "description": "https://infura.io/",
+  "main": "deposit.js",
+  "dependencies": {
+    "web3": "^1.2.5-rc.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
