@@ -22,6 +22,21 @@ console.log("```");
 
 web3.eth.getBlockNumber().then(lastBlockNumber => {
   web3.eth.getBlock(lastBlockNumber).then(lastBlock => {
+    web3.eth.getBlock(lastBlockNumber - pastNumber1).then(pastBlock => {
+      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber1;
+      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
+      console.log("直近", pastNumber1, " ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
+
+    web3.eth.getBlock(lastBlockNumber - pastNumber2).then(pastBlock => {
+      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber2;
+      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
+      console.log("直近", pastNumber2, " ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
+
+    web3.eth.getBlock(lastBlockNumber - pastNumber3).then(pastBlock => {
+      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber3;
+      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
+      console.log("直近", pastNumber3, "ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
+      
     const blockMiningTime12 = 12;
     const unixtime_expectation12 = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime12 ) + lastBlock.timestamp;
     console.log("ブロック生成時間 ", blockMiningTime12, " 秒でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation12 * convert_msec).toLocaleString());
@@ -46,22 +61,8 @@ web3.eth.getBlockNumber().then(lastBlockNumber => {
     const unixtime_expectation17 = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime17 ) + lastBlock.timestamp;
     console.log("ブロック生成時間 ", blockMiningTime17, " 秒でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation17 * convert_msec).toLocaleString());
 
-    web3.eth.getBlock(lastBlockNumber - pastNumber1).then(pastBlock => {
-      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber1;
-      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
-      console.log("直近", pastNumber1, " ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
-
-    web3.eth.getBlock(lastBlockNumber - pastNumber2).then(pastBlock => {
-      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber2;
-      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
-      console.log("直近", pastNumber2, " ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
-
-    web3.eth.getBlock(lastBlockNumber - pastNumber3).then(pastBlock => {
-      const blockMiningTime = (lastBlock.timestamp - pastBlock.timestamp) / pastNumber3;
-      const unixtime_expectation = ((hardForkBlockNumber - lastBlockNumber) * blockMiningTime ) + lastBlock.timestamp;
-      console.log("直近", pastNumber3, "ブロック生成平均時間: ", blockMiningTime, "秒    でのハードフォーク予想日時(JST):   ", new Date(unixtime_expectation * convert_msec).toLocaleString());
-      console.log("```");
-      console.log("以上、よろしくお願いいたします。");
+    console.log("```");
+    console.log("以上、よろしくお願いいたします。");
     });
     });
     });
