@@ -14,7 +14,7 @@ eth-upgrade-timing-estimation.jsは
 npm install
 ```
 
-### INFURAで無料アカウント登録を行い、API Keyを取得する
+### INFURAでアカウント登録(無料で可能)を行い、API Keyを取得する
 
 https://infura.io/
 
