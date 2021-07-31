@@ -1,6 +1,6 @@
 const Web3 = require('web3');
 
-const hardForkBlockNumber = 12965000;
+const hardForkBlockNumber = process.env.ETH_UPGRADE_BLOCKNUMBER;
 
 const pastNumber1 = 10000;
 const pastNumber2 = 50000;
