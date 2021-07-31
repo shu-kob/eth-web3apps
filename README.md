@@ -1,12 +1,18 @@
-# deposit.jsの使い方
+# 説明
 
-## npm installを実行
+eth-upgrade-timing-estimation.jsは
+
+
+
+# 使い方
+
+## 共通
+
+### npm installを実行
 
 ```
 npm install
 ```
-
-## 環境変数の設定
 
 ### INFURAで無料アカウント登録を行い、API Keyを取得する
 
@@ -17,6 +23,29 @@ https://infura.io/
 ```
 export INFURA_API_KEY="YOUR_API_KEY"
 ```
+
+## eth-upgrade-timing-estimation.jsの使い方
+
+## 事前準備
+
+ブロックを書き換える
+```
+const hardForkBlockNumber = 12965000;
+```
+
+## 実行
+
+```
+node eth-upgrade-timing-estimation
+```
+
+## deposit.jsの実行
+
+```
+node deposit
+```
+
+## deposit.jsの使い方
 
 ### ETHのPrivatet Keyを環境変数に設定する
 
