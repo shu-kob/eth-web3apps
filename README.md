@@ -28,9 +28,11 @@ export INFURA_API_KEY="YOUR_API_KEY"
 
 ## 事前準備
 
-ブロックを書き換える
+ハードフォークするブロックナンバーを環境変数に設定
+（2021年8月London Upgradeの場合は12965000）
+
 ```
-const hardForkBlockNumber = 12965000;
+export ETH_UPGRADE_BLOCKNUMBER=12965000
 ```
 
 ## 実行
