@@ -1,8 +1,8 @@
 # 説明
 
-eth-upgrade-timing-estimation.jsは
+eth-upgrade-timing-estimation.jsはハードフォーク予測時刻を計算するツールです
 
-
+deposit.jsは任意のEOAから任意のEOAへ任意のETH、任意のGasを送金できるツールです。繰り返し実行することで連続入金の負荷試験ができます。
 
 # 使い方
 
