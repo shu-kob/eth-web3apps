@@ -4,7 +4,7 @@
   "description": "https://infura.io/",
   "main": "deposit.js",
   "dependencies": {
-    "web3": "^1.4.0",
+    "web3": "^1.6.1",
     "ws": ">=5.2.3"
   },
   "devDependencies": {},
