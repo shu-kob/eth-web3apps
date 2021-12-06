@@ -1,8 +1,10 @@
-# 説明
+# eth-web3apps
 
-eth-upgrade-timing-estimation.jsは
+eth-upgrade-timing-estimation.jsはハードフォーク予想日時算出ツール
 
+deposit.jsはJSで署名してETHを送金するツール
 
+ともにINFURA APIを使用
 
 # 使い方
 
