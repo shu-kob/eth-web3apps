@@ -28,9 +28,9 @@ export INFURA_API_KEY="YOUR_API_KEY"
 
 ## 事前準備
 
-ブロックを書き換える
+ハードフォークのブロック高を環境変数に設定する
 ```
-const hardForkBlockNumber = 12965000;
+export ETH_UPGRADE_BLOCKNUMBER=13773000
 ```
 
 ## 実行
