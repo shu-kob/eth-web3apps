@@ -39,7 +39,7 @@ async function main() {
   const tx = new ethTx(txParams, { 'chain': 'ropsten' });
   // 秘密鍵での署名 
   tx.sign(privateKey);
-　　　// Transactionオブジェクトをシリアライズして、16進数で表現
+  // Transactionオブジェクトをシリアライズして、16進数で表現
   const serializedTx = tx.serialize();
   const rawTx = '0x' + serializedTx.toString('hex');
   console.log("rawTx: " + rawTx);
